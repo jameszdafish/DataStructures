@@ -27,11 +27,3 @@ class JamesStack:
     # Returns how many data points are in ze stack
     def size(self):
         return self.linked_list_object.size()
-
-
-my_stack = JamesStack()
-my_stack.push("lemon")
-my_stack.push("cookie")
-print(my_stack.peek())
-print(my_stack.pop())
-print(my_stack.push("dog"))
