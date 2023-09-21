@@ -98,32 +98,6 @@ class JamesLinkedList:
 
     # removes all occurrences of item from the list
     def remove_all(self, data):
-        checker = self.head
-        while self.head.data == data:
-            self.head = self.head.next
-            self.length -= 1
-            if self.head is None:
-                return
-
-        for i in range(self.length):
-            if i == 0:
-                previous_node = self.head
-                checker = self.head
-            else:
-                previous_node = checker
-                checker = checker.next
-
-            if checker.data == data:
-                previous_node.next = previous_node.next.next
-                self.length -= 1
-
-        new_last_node = self.head
-        for i in range(self.length - 1):
-            new_last_node = new_last_node.next
-        self.last_node = new_last_node
-
-    # remove all but efficient
-    def remove_all_2(self, data):
         while self.head is not None and self.head.data == data:
             self.head = self.head.next
             self.length -= 1
@@ -137,34 +111,3 @@ class JamesLinkedList:
                 current_node = current_node.next
 
         self.last_node = current_node
-
-
-james_linkedlist_object = JamesLinkedList()
-# This is where I tested things:
-# james_linkedlist_object.append("A")
-# james_linkedlist_object.append("B")
-# james_linkedlist_object.append("A")
-print(james_linkedlist_object)
-print(james_linkedlist_object.contains("A"))
-# james_linkedlist_object.insert(2, "Interceptor")
-
-# print(james_linkedlist_object.get(0))
-# print(james_linkedlist_object.get(1))
-# print(james_linkedlist_object.get(2))
-# print(james_linkedlist_object.get(3))
-# print(james_linkedlist_object.get(4))
-# print(james_linkedlist_object.get(5))
-# print(james_linkedlist_object.get(6))
-
-# print("Cock")
-# james_linkedlist_object.remove_all("A")
-print(james_linkedlist_object)
-# print(james_linkedlist_object.get(0))
-# print(james_linkedlist_object.get(1))
-# print(james_linkedlist_object.get(2))
-# print(james_linkedlist_object.get(3))
-# print(james_linkedlist_object.get(4))
-# print(james_linkedlist_object.get(5))
-# print(james_linkedlist_object.get(6))
-
-# print(james_linkedlist_object.last_node.data)
