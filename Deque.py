@@ -144,26 +144,3 @@ class Deque:
 
             if current_node.previous is None:
                 self.tail = new_node
-
-
-mydeque = Deque()
-# mydeque.append("0")
-# mydeque.appendleft("1")
-# mydeque.append("2")
-# mydeque.appendleft("3")
-# mydeque.extend("5", "6", "7")
-# mydeque.extendleft("5", "6", "7")
-# mydeque.pop()
-# mydeque.popleft()
-mydeque.append(1)
-mydeque.append(2)
-mydeque.append(3)
-mydeque.append(4)
-mydeque.append(5)
-mydeque.append(6)
-mydeque.append(7)
-mydeque.append(8)
-print(mydeque.__str__())
-mydeque.reverse()
-print(mydeque.__str__())
-print(mydeque.tail.data)
